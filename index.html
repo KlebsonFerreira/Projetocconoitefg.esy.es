@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8" />
+        <title>Rota mais próxima do cliente</title>
+        <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    </head>
+ 
+    <body>
+    	<div id="site">
+        
+        	<h1>Rota mais próxima do cliente</h1>
+        
+            <form method="post" action="index.html">
+                <fieldset>
+                    <legend>Criar rotas</legend>
+                    
+                    <div>
+                        <label for="txtEnderecoPartida">CEP da Farmácia:</label>
+                        <input type="text" id="txtEnderecoPartida" name="txtEnderecoPartida" />
+                    </div>
+                    
+                    <div>
+                        <label for="txtEnderecoChegada">CEP do Cliente :</label>
+                        <input type="text" id="txtEnderecoChegada" name="txtEnderecoChegada" />
+                    </div>
+                    
+                    <div>
+                        <input type="submit" id="btnEnviar" name="btnEnviar" value="Enviar" />
+                    </div>
+                </fieldset>
+            </form>
+        
+            <div id="mapa"></div>
+            
+            <div id="trajeto-texto"></div>
+        
+        </div>
+        
+        <script src="./jquery.min.js"></script>
+		
+        <!-- Maps API Javascript -->
+        <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+ 
+        <!-- Arquivo de inicialização do mapa -->
+		<script src="./mapa.js"></script>
+    </body>
+</html>
